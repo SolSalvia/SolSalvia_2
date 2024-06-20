@@ -1,0 +1,165 @@
+------------------------------------
+|             <<class>>                 |
+|              Persona                  |
+|---------------------------------------|
+| - name: String                        |
+| - age: Integer                        |
+| - neighborhood: String                |
+| - dni: String                         |
+| - occupation: String                  |
+| - kitNumber: Integer                  |
+|---------------------------------------|
+| + Persona()                           |
+| + Persona(name: String, age: Integer, |
+|   neighborhood: String, dni: String,  |
+|   occupation: String, kitNumber:      |
+|   Integer)                            |
+| + getName(): String                   |
+| + setName(name: String): void         |
+| + getAge(): Integer                   |
+| + setAge(age: Integer): void          |
+| + getNeighborhood(): String           |
+| + setNeighborhood(neighborhood:       |
+|   String): void                       |
+| + getDni(): String                    |
+| + setDni(dni: String): void           |
+| + getOccupation(): String             |
+| + setOccupation(occupation: String):  |
+|   void                                |
+| + getKitNumber(): Integer             |
+| + setKitNumber(kitNumber: Integer):   |
+|   void                                |
+ ---------------------------------------
+                   
+   ---------------------------
+  |          RegistroPersonas         |
+  |----------------------------|
+  | - people: List<Persona>         |
+  | - amountReagents: Integer        |
+  | - counterKits: Integer          |
+  |----------------------------|
+  | + RegistroPersonas()             |
+  | + RegistroPersonas(people:        |
+  |   List<Persona>, amountReagents:  |
+  |   Integer, counterKits: Integer)  |
+  | + getPeople(): List<Persona>      |
+  | + setPeople(people: List<Persona>): |
+  |   void                            |
+  | + getAmountReagents(): Integer    |
+  | + setAmountReagents(amountReagents: |
+  |   Integer): void                  |
+  | + getCounterKits(): Integer      |
+  | + setCounterKits(counterKits:     |
+  |   Integer): void                  |
+  | + addPerson(person: Persona):     |
+  |   void throws ReactivoInsuficienteException|
+  | + verifyDNI(dni: String): boolean |
+  | + testear(resultadoTest: TestResult): |
+  |   void                            |
+  | + aislar(resultadoTest: TestResult): |
+  |   void                            |
+  | + obtenerBarrioPorDni(dni: String): |
+  |   String                          |
+  | - saveFile(aislamientoException:   |
+  |   AislamientoException): void     |
+   ---------------------------
+               
+   ---------------------------
+  |          TestResult                |
+  |----------------------------|
+  | - result: Map<Integer, Test>     |
+  |----------------------------|
+  | + TestResult()                   |
+  | + addResult(test: Test): void    |
+  | + getResult(): Map<Integer, Test>|
+   ---------------------------
+            
+   ---------------------------
+  |           Test                     |
+  |----------------------------|
+  | - kitNum: Integer                |
+  | - dni: String                    |
+  | - temperature: Float             |
+  |----------------------------|
+  | + Test()                         |
+  | + Test(kitNum: Integer, dni:     |
+  |   String, temperature: Float)    |
+  | + getKitNum(): Integer           |
+  | + setKitNum(kitNum: Integer):    |
+  |   void                          |
+  | + getDni(): String               |
+  | + setDni(dni: String): void      |
+  | + getTemperature(): Float        |
+  | + setTemperature(temperature:    |
+  |   Float): void                   |
+   ---------------------------
+              
+   -------------------------------------
+  |     AislamientoException               |
+  |-----------------------------------|
+  | - numKit: Integer                   |
+  | - barrio: String                   |
+  |-----------------------------------|
+  | + AislamientoException(numKit:      |
+  |   Integer, barrio: String)         |
+  | + getNumKit(): Integer             |
+  | + setNumKit(numKit: Integer):      |
+  |   void                            |
+  | + getBarrio(): String              |
+  | + setBarrio(barrio: String): void  |
+   -------------------------------------
+              
+   -------------------------------------
+  |  ReactivoInsuficienteException           |
+  |-----------------------------------|
+  | - cantReagents: Integer            |
+  |-----------------------------------|
+  | + ReactivoInsuficienteException(cantReagents: |
+  |   Integer)                        |
+  | + getCantReagents(): Integer      |
+  | + setCantReagents(cantReagents:   |
+  |   Integer): void                  |
+   -------------------------------------
+                    
+   -------------------------------------
+  |            ExportJSON             |
+  |-----------------------------------|
+  | - registro: RegistroPersonas       |
+  |-----------------------------------|
+  | + ExportJSON(registro:            |
+  |   RegistroPersonas)               |
+  | + exportar(personas: Persona[],    |
+  |   resultadoTest: TestResult): void |
+   -------------------------------------
+                     
+   -------------------------------------
+  |           ExportData               |
+  |-----------------------------------|
+  | - sanos: Persona[]                |
+  | - aislar: CasoAislamiento[]       |
+  |-----------------------------------|
+  | + getSanos(): Persona[]           |
+  | + setSanos(sanos: Persona[]): void|
+  | + getAislar(): CasoAislamiento[]  |
+  | + setAislar(aislar:               |
+  |   CasoAislamiento[]): void        |
+   -------------------------------------
+                    
+   -------------------------------------
+  |        CasoAislamiento              |
+  |-----------------------------------|
+  | - kit: Integer                    |
+  | - temperature: Float              |
+  | - barrio: String                  |
+  |-----------------------------------|
+  | + CasoAislamiento(kit: Integer,   |
+  |   temperature: Float, barrio:     |
+  |   String)                         |
+  | + getKit(): Integer               |
+  | + setKit(kit: Integer): void      |
+  | + getTemperature(): Float         |
+  | + setTemperature(temperature:     |
+  |   Float): void                    |
+  | + getBarrio(): String             |
+  | + setBarrio(barrio: String): void |
+   -------------------------------------
